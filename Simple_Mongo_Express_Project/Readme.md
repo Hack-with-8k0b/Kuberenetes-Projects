@@ -6,6 +6,12 @@ It sets up a MongoDB database and a Mongo-Express web interface for managing the
 
 ---
 
+## Architecture Diagram
+
+![MongoDB and Mongo-Express Deployment Flow](flowchart.png)
+
+---
+
 ## Components Used
 
 - **Deployments**  
@@ -50,23 +56,3 @@ kubectl get all
 
 # Access the Mongo-Express web interface
 minikube service mongo-express-service
-
-## Architecture Diagram
-
-```mermaid
-flowchart LR
-    User((User))
-    subgraph External Service
-        ME[Mongo-Express (Web UI)]
-    end
-    subgraph Internal Service
-        MDB[MongoDB Database]
-    end
-    ConfigMap[ConfigMap: databaseUrl]
-    Secret[Secret: Credentials]
-
-    User -->|HTTP| ME
-    ME -->|DB Connection| MDB
-    ME -.-> ConfigMap
-    ME -.-> Secret
-    MDB -.-> Secret
