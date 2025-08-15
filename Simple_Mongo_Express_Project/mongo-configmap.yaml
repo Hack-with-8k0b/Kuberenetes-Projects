@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+data:
+  database_url: mongodb-service # Defining the dynamic database url for mongo-express to access 
