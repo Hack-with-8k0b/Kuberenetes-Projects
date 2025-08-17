@@ -1,5 +1,10 @@
 # Simple MongoDB and Mongo-Express Deployment using Kubernetes
 
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Learning-blue?logo=kubernetes)
+![AWS ECR](https://img.shields.io/badge/AWS-ECR-orange?logo=amazonaws)
+![Docker](https://img.shields.io/badge/Container-Docker-blue?logo=docker)
+![License](https://img.shields.io/badge/Practice-DevOps-green)
+
 ## Overview
 This guide demonstrates a basic deployment of **MongoDB** and **Mongo-Express** on Kubernetes using **Minikube**.  
 It sets up a MongoDB database and a Mongo-Express web interface for managing the database.

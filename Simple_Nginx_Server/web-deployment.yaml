@@ -17,7 +17,7 @@ spec:
         version: v01
     spec:
       imagePullSecrets:
-        - name: my-registry-key
+      - name: my-registry-key
       containers:
       - name: nginx
         image: 474668421704.dkr.ecr.eu-north-1.amazonaws.com/bkob/demo:latest
@@ -28,7 +28,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx
+  name: nginx-service
 spec:
   selector:
     app: nginx
