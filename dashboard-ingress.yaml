@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dashboard-ingress
+  namespace: kubernetes-dashboard
+spec:
+  rules:
+  - host: dashboard.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kubernetes-dashboard
+            port:
+              number: 80
+
+# Need to run <$minikube addons enable ingress > first before deploying the ingress in order to enable the ingress
+# Need to run <$ minikube dashboard > to create kubernetes dashboard namespace and other infrastructure to support the above ingress deployment
+# <~~~~~~~~~~~ Deploy the above ingress ~~~~~~~~~~~~~~~~~~>
+# Need to run <$ minikube tunnel > after this file is deployed and updated the hosts file to get the desried output
